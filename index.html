@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LMS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+   
+   
+
+
+
+</head>
+<body>
+    <div class="container mt-5">  
+        <h1 class="text-center mb-5">Library Management System</h1>
+        <form action=""id="bookForm">
+            <div class="form-group mb-3">
+                <label for="bookTitle">Book Title:</label>
+                <input type="text" id="bookTitle" class="form-control" placeholder="Enter Book title" required>
+
+            </div>
+            <div class="form-group mb-3">
+                <label for="author">Author:</label>
+                <input type="text" id="author" class="form-control" placeholder="Enter Author Name" required>
+
+            </div>
+            <div class="form-group mb-3">
+                <label for="genra">Genre:</label>
+                <input type="text" id="genre" class="form-control" placeholder="Enter Genre Name" required>
+
+            </div>
+            <div class="form-group mb-3">
+                <label for="year">Year:</label>
+                <input type="text" id="year" class="form-control" placeholder="Enter Publishing Year" required>
+
+            </div>
+            <div class="form-group mb-3">
+                <label for="Quantity">Quentity:</label>
+                <input type="number" class="form-control" id="qun" name="qun" placeholder="Quantity" required>
+
+            </div>
+            
+            <button class="btn btn-success" type="submit" id="deleteBtn">Add Book</button>
+            <button class="btn btn-warning ml-2 text-white" type="submit" id="clearBtn">Clear All</button>
+        </form>
+        <table class="table mt-4" id="bookTable">
+      
+<thead>
+    <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Genre</th>
+        <th>Year</th>
+        <th>Quantity</th>
+        <th>Actions</th>
+       
+    </tr>
+</thead>
+<tbody></tbody>
+</table>
+    </div>
+    <div class="modal fade" id="editModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header"> 
+                    <h4 class="modal-title text-center text-success">Edit Book</h4>
+                </div>
+                <div class="modal-body">
+                    <form action=""id="editForm" >
+                        <div class="form-group mb-3">
+                            <div class="form-group mb-3 text-success">
+                                <label for="booktitle">Book Title:</label>
+                                <input type="text" id="editbooktitle" class="form-control" placeholder="Enter Book title" required>
+                
+                            </div>
+                            <div class="form-group mb-3 text-success">
+                                <label for="author">Author:</label>
+                                <input type="text" id="editauthor" class="form-control" placeholder="Enter Author Name" required>
+                
+                            </div>
+                            <div class="form-group mb-3 text-success">
+                                <label for="genra">Genre:</label>
+                                <input type="text" id="editgenre" class="form-control" placeholder="Enter Genre Name" required>
+                
+                            </div>
+                            <div class="form-group mb-3 text-success">
+                                <label for="year">Year:</label>
+                                <input type="text" id="edityear" class="form-control" placeholder="Enter Publishing Year" required>
+                
+                            </div>
+                            <div class="form-group mb-3 text-success">
+                                <label for="quantity">Quantity:</label>
+                                <input type="number" id="editqun" class="form-control" name="qun" placeholder="Quantity" required>
+                
+                            </div>
+                            <input type="hidden" id="editbookid">
+                            <button class="btn btn-success" type="submit" id="editbtn">Save Changes</button>
+                            <button class="btn btn-danger ml-2" type="submit" id="clearbtn" data-dismiss="modal">Close
+
+                            </button>
+                        </form>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+ </div>
+
+
+    </div>
+        
+    
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+<script src="index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</html>
